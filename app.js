@@ -19,7 +19,12 @@ function searchByName(){
     }else{
         console.log('Sorry, looks like there is no one with that name.');
     }
+
+    people.filter(function(peoplewanted){
+        return true(peoplewanted ==id &&peoplewanted)
+    
 }
+
 function printName(){
     document.getElementById("people").innerHTML
 }
