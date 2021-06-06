@@ -1,11 +1,27 @@
 'use strict';
 
+
+
+
+
 function searchByName(){
     // Grabbing the values from our nameForm form and inputs.
     document.getElementById("people").innerHTML
     let firstNameInput = document.forms['nameForm']['fname'].value;
     let lastNameInput = document.forms['nameForm']['lname'].value;
-    
+
+    // Checks user input against names in Database
+
+    function searchFirst(people){
+        let fnameInput = document.forms['nameForm']['fname'].vaule;
+        let firstNameRes = people.filter(function(person){
+            if(person.firstName == fnameInput){
+                return true;
+            }
+            return false;
+      })
+      return firstNameInput;
+    }
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = people.filter(function (person) {
@@ -22,16 +38,18 @@ function searchByName(){
         console.log('Sorry, looks like there is no one with that name.');
     }
 
-    //Form Validation
-
-    function nameForm(){
-        let
     }
-}
+
+    //Will start with form validation of user(s)-verify with team member
+    function formValidation(){
+
+    }
 
 function printName(){
     document.getElementById("people").innerHTML
 }
+
+//Populates table
 printName()
 people.map(function(el){
     document.getElementById("people").innerHTML += `<tr>
