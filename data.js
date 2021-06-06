@@ -287,7 +287,3 @@ const people = [
 		"currentSpouse": null
 	}
 ];
-people.filter(function(peoplewanted){
-	return true(peoplewanted ==id &&peoplewanted)
-
-})

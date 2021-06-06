@@ -2,8 +2,10 @@
 
 function searchByName(){
     // Grabbing the values from our nameForm form and inputs.
+    document.getElementById("people").innerHTML
     let firstNameInput = document.forms['nameForm']['fname'].value;
     let lastNameInput = document.forms['nameForm']['lname'].value;
+    
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = people.filter(function (person) {
@@ -20,9 +22,11 @@ function searchByName(){
         console.log('Sorry, looks like there is no one with that name.');
     }
 
-    people.filter(function(peoplewanted){
-        return true(peoplewanted ==id &&peoplewanted)
-    
+    //Form Validation
+
+    function nameForm(){
+        let
+    }
 }
 
 function printName(){
