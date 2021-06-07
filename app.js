@@ -24,7 +24,10 @@ function searchByName(){
     }
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
+
+    //Form Validation will allow user to access this file to verify if entered name exist in database.
     let filteredPeople = people.filter(function (person) {
+        document.getElementById("nameForm").innerHTML += `<input>`
         if(person.firstName === firstNameInput && person.lastName === lastNameInput){
             return true;
         }
@@ -41,7 +44,7 @@ function searchByName(){
     }
 
     //Will start with form validation of user(s)-verify with team member
-    function formValidation(){
+    {
 
     }
 
