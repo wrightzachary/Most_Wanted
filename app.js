@@ -49,9 +49,7 @@ function searchByName(){
     }
 
 function printName(){
-    document.getElementById("people").innerHTML
 }
-
 //Populates table
 printName()
 people.map(function(el){
@@ -69,3 +67,27 @@ people.map(function(el){
     <td>${el.currentSpouse}</td>
     </tr>`
 })
+
+//Testiing a for on possibly looping through the array(condition)
+function searchForName(){
+for(i = 0; i < people.length; i++){
+	if(people[i].height < 70) {
+		document.write(people[i].height + "," + people[i].firstName + people[i].lastName)
+	}
+}
+}
+
+// Or filter objects 
+
+let newPeople = people.filter(function(ele){
+	return ele.eyeColor;
+});
+console.log(newPeople);
+
+// Ideal for using recursion
+
+// const reducedFilter = ( people,keys, fn) =>
+// people.filter(fn).map(el => 
+// 	keys.reduce((acc,key) =>{
+// 	acc[key] = el[key];
+	
