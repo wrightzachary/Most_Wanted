@@ -1,20 +1,45 @@
 'use strict';
 
 
+let newPeople = people;
+function searchFirstName(){
+    let firstNameInput =document.forms['searchBox']['fname'].value;
+    let filteredPeople= people.filter(function(person) {
+        input= document.getElementById('query')
+        firstNameInput = firstNameInput.charAt(0).toUpperCase() + firstNameInput.slice(1);
+        if(person.firstName === firstNameInput){
+            return true;
+        }
+        return false;
+    });
+}
+ newPeople = people;
+function searchLastName(){
+    let firstNameInput =document.forms['searchBox']['lastName'].value;
+    let filteredPeople= people.filter(function(person) {
+        input= document.getElementById('query')
+        lastNameInput = lastNameInput.charAt(0).toUpperCase() + lastNameInput.slice(1);
+        if(person.lastName === lastNameInput){
+            return true;
+        }
+        return false;
+    });
+}
+
 
 
 
 function searchByName(){
     // Grabbing the values from our nameForm form and inputs.
     document.getElementById("people").innerHTML
-    let firstNameInput = document.forms['nameForm']['fname'].value;
-    let lastNameInput = document.forms['nameForm']['lname'].value;
+    let firstNameInput = document.forms['searchbox']['firstName'].value;
+    let lastNameInput = document.forms['searchbox']['lastName'].value;
 
     // Checks user input against names in Database
 
     function searchFirst(people){
-        let fnameInput = document.forms['nameForm']['fname'].vaule;
-        let firstNameRes = people.filter(function(person){
+        let firstNameInput = document.forms['searchbox']['firstName'].vaule;
+        let filteredPeople = people.filter(function(person){
             if(person.firstName == fnameInput){
                 return true;
             }
@@ -66,28 +91,16 @@ people.map(function(el){
     <td>${el.parents}</td>
     <td>${el.currentSpouse}</td>
     </tr>`
-})
-
-//Testiing a for on possibly looping through the array(condition)
-function searchForName(){
-for(i = 0; i < people.length; i++){
-	if(people[i].height < 70) {
-		document.write(people[i].height + "," + people[i].firstName + people[i].lastName)
-	}
-}
-}
-
-// Or filter objects 
-
-let newPeople = people.filter(function(ele){
-	return ele.eyeColor;
 });
-console.log(newPeople);
+ 
+const height=function searchHeight(){
+    console.log("Your overweight");
+}
+//Testiing a for on possibly looping through the array(condition)
+// function searchForName(){
+// for(i = 0; i < people.length; i++){
+// 	if(people[i].height < 70) {
+// 		document.write(people[i].height + "," + people[i].firstName + people[i].lastName)
+// 	}
+// }
 
-// Ideal for using recursion
-
-// const reducedFilter = ( people,keys, fn) =>
-// people.filter(fn).map(el => 
-// 	keys.reduce((acc,key) =>{
-// 	acc[key] = el[key];
-	
