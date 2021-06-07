@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most Wanted</title>
-    <a href="index.html"></a>
-    <a href="contact.html"></a>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-    <div class="navbar"-centered>
-        <a href="index.html">Home</a>
-        <a href="mostWanted.html">Most Wanted</a>
-        <a href="contact.html">Contact Me</a>
-        <div class="navbar">
-        </div>
-    </nav>    
+  <head>
+    <meta charset="utf-8">
+    <title>devCodeCamp &middot; Most Wanted</title>
+  </head>
+  <body>
+
+
     <!-- Filter/Search Table -->
     <table id="table">
     </table>
@@ -34,7 +24,6 @@
       <input type="text" name="weight" id="weight" placeholder="Search by weight" onkeyup="weight()">
       <input type="text" name="eyec" id="eyecolor" placeholder="Search by eyecolor" onkeyup="eyecolor()">
       <input type="text" name="occupation" id="occupation" placeholder="Search by occupation" onkeyup="occupation()">
-
       <br>
       <br>
       <label for="dateOfBirth">Search by Birth</label>
@@ -50,7 +39,28 @@
       <br>
       <br>
       <button type="button" oneclick="searchByFirstName();searchByLastName();searchByGender(); searchByHeight();searchByWeight();searchByEyeColor();searchbydateOfBirth();searchByOccupation()">Search</button>
-     
+    </form>
+    <form id="searchBox2" name="form2">
+      <h2>More Than One Criteria Search </h2>
+      <input type="text" name="fname" id="firstName2" class ="multi" placeholder="Search first name" onkeyup="fname()">
+      <input type="text" name="lname" id="lastName2" class ="multi" placeholder="Search last name" onkeyup="lname()">
+      <input type="text" name="lname" id="height2" class ="multi" placeholder="Search by height" onkeyup="height()">
+      <input type="text" name="weight" id="weight2" class ="multi" placeholder="Search by weight" onkeyup="weight()">
+      <input type="text" name="eyec" id="eyecolor2" class = "multi" placeholder="Search by eyecolor" onkeyup="eyecolor()">
+      <input type="text" name="occupation" id="occupation2" class = "multi" placeholder="Search by occupation" onkeyup="occupation()">
+     <label for="gender2">Search by Gender</label>
+     <select name="gender2" id="gender2" class="multi">
+     <option value="">Select</option>
+     <option value="male">Male</option>
+     <option value="female">Female</option>
+      </select>
+      <br>
+      <br>
+      <input type="button" id="search" value="search" oneclick="multiSearch()"/>
+    </form>
+    <button type="button" oneclick="reset()">Reset Form</button>
+    </div>
+    </div>
     <h1>Most Wanted</h1>
     <table>
       <thead>
@@ -73,7 +83,7 @@
   
       </tbody>
   </table>
-  <script src="data.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html> -->
