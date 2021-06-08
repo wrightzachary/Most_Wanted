@@ -1,11 +1,12 @@
 'use strict';
 
 
+ // Checks user input against names in Database
+
 let newPeople = people;
 function searchFirstName(){
-    let firstNameInput =document.forms['searchBox']['fname'].value;
+    let firstNameInput =document.forms['searchBox']['firstName'].value;
     let filteredPeople= people.filter(function(person) {
-        input= document.getElementById('query')
         firstNameInput = firstNameInput.charAt(0).toUpperCase() + firstNameInput.slice(1);
         if(person.firstName === firstNameInput){
             return true;
@@ -13,11 +14,9 @@ function searchFirstName(){
         return false;
     });
 }
- newPeople = people;
 function searchLastName(){
-    let firstNameInput =document.forms['searchBox']['lastName'].value;
+    let lastNameInput =document.forms['searchBox']['lastName'].value;
     let filteredPeople= people.filter(function(person) {
-        input= document.getElementById('query')
         lastNameInput = lastNameInput.charAt(0).toUpperCase() + lastNameInput.slice(1);
         if(person.lastName === lastNameInput){
             return true;
@@ -26,10 +25,22 @@ function searchLastName(){
     });
 }
 
+function searchHeight(){
+    let heighInput =document.forms['search']['height'].value;
+    let heightNum = Number(heighInput);
+    let filteredWeight =people.filter(function(person){
+        if(person.height === heightNum){
+            return true;
+        }
+        return false;
+    });
+
+}
 
 
 
-function searchByName(){
+
+function searchName(){
     // Grabbing the values from our nameForm form and inputs.
     document.getElementById("people").innerHTML
     let firstNameInput = document.forms['searchbox']['firstName'].value;
@@ -37,16 +48,6 @@ function searchByName(){
 
     // Checks user input against names in Database
 
-    function searchFirst(people){
-        let firstNameInput = document.forms['searchbox']['firstName'].vaule;
-        let filteredPeople = people.filter(function(person){
-            if(person.firstName == fnameInput){
-                return true;
-            }
-            return false;
-      })
-      return firstNameInput;
-    }
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
 
@@ -91,16 +92,40 @@ people.map(function(el){
     <td>${el.parents}</td>
     <td>${el.currentSpouse}</td>
     </tr>`
+
+    
 });
+
+//Performs real time search changes as user types
+
+function updateResult(query) {
+    let resultList = document.querySelector(".result");
+    resultList.innerHTML = "";
+
+    arr.map(function(algo){
+        query.split(" ").map(function (word){
+            if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1){
+                resultList.innerHTML += `<tr>
+                <td id=${algo.id}>${el.id}</td>
+                <td>${el.firstName}</td>
+                <td>${el.lastName}</td>
+                <td>${el.gender}</td>
+                <td>${el.dob}</td>
+                <td>${el.height}</td>
+                <td>${el.weight}</td>
+                <td>${el.eyeColor}</td>
+                <td>${el.occupation}</td>
+                <td>${el.parents}</td>
+                <td>${el.currentSpouse}</td>
+                </tr>`
+            }
+        })
+    })
+}
+
  
 const height=function searchHeight(){
     console.log("Your overweight");
 }
-//Testiing a for on possibly looping through the array(condition)
-// function searchForName(){
-// for(i = 0; i < people.length; i++){
-// 	if(people[i].height < 70) {
-// 		document.write(people[i].height + "," + people[i].firstName + people[i].lastName)
-// 	}
-// }
+
 

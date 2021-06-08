@@ -5,32 +5,29 @@
     <title>devCodeCamp &middot; Most Wanted</title>
   </head>
   <body>
-
-
     <!-- Filter/Search Table -->
     <table id="table">
     </table>
     <div class="menudrop">
-      
-      <button querysearch="showSearch()" class="querybtn">Search</button>
     <div> 
       <form>
-        <input type="text" name="fname" id="firstName" placeholder="Search first name" >
-        <input type="text" name="lname" id="lastName" placeholder="Search last name" >
+        <label for="firstName"> First Name: </label>
+        <input type="text" name="fname" id="firstName" required maxlength="35" placeholder="Search first name" >
+        <label for="lastName"> Last Name: </label>
+        <input type="text" name="lname" id="lastName" required maxlength="35"  placeholder="Search last name" >
        <button onclick="searchByName()"></button>
       </form>
     </div>
-    <div id="query" class="query-information">
       <form id="searchBox" name="form1">
       <h2>Individual Profile Search</h2>
       </form>
       <input id="query">
-      <input type="text" name="fname" id="firstName" placeholder="Search first name" >
-      <input type="text" name="lname" id="lastName" placeholder="Search last name" >
-      <input type="text" name="height" id="height" placeholder="Search by height" >
-      <input type="text" name="weight" id="weight" placeholder="Search by weight" >
-      <input type="text" name="eyec" id="eyecolor" placeholder="Search by eyecolor" >
-      <input type="text" name="occupation" id="occupation" placeholder="Search by occupation">
+      <input type="text" name="fname" id="firstName"requiredmaxlength="35"                    placeholder="Search first name" >
+      <input type="text" name="lname" id="lastName"requiredmaxlength="35" placeholder="Search last name" >
+      <input type="text" name="height" id="height"requiredmaxlength="35" placeholder="Search by height" >
+      <input type="text" name="weight" id="weight"requiredmaxlength="35" placeholder="Search by weight" >
+      <input type="text" name="eyec" id="eyecolor"requiredmaxlength="35" placeholder="Search by eyecolor" >
+      <input type="text" name="occupation" id="occupation"requiredmaxlength="35" placeholder="Search by occupation">
     </input>
       </div>
       <br>
@@ -47,10 +44,11 @@
       <br>
       <br>
       <br>
-      <button type="button" onclick="searchFirstName();searchLastName()">Search</button>
-      <!-- searchByLastName();searchByGender(); searchByHeight();searchByWeight();searchByEyeColor();searchbydateOfBirth();searchByOccupation() -->
+      <button type="button" onclick="searchFirstName();searchLastName();searchGender(); searchHeight();searchWeight();searchEyeColor();searchdateOfBirth();searchOccupation() ">Search</button>
       
     </form>
+
+    <!--Make Revision to multi-search option -->
     <form id="searchBox2" name="form2">
       <h2>More Than One Criteria Search </h2>
       <input type="text" name="fname2" id="firstName2" class ="multi" placeholder="Search first name" >
@@ -73,9 +71,10 @@
     </div>
     </div>
     <h1>Most Wanted</h1>
-    <table>
+    <table type="search" placeholder="search">
       <thead>
           <tr>
+            <th id="result-list"></th>
               <th>Id</th>
               <th>First Name</th>
               <th>Last Name</th>
