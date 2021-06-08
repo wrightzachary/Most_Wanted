@@ -74,60 +74,9 @@ function searchName(){
 
     }
 
-<<<<<<< HEAD
-// function printName(){
-// }
-// Populates table
-// printName()
-// people.map(function(el){
-//     document.getElementById("people").innerHTML += `<tr>
-//     <td id=${el.id}>${el.id}</td>
-//     <td>${el.firstName}</td>
-//     <td>${el.lastName}</td>
-//     <td>${el.gender}</td>
-//     <td>${el.dob}</td>
-//     <td>${el.height}</td>
-//     <td>${el.weight}</td>
-//     <td>${el.eyeColor}</td>
-//     <td>${el.occupation}</td>
-//     <td>${el.parents}</td>
-//     <td>${el.currentSpouse}</td>
-//     </tr>`
-
-    
-// });
-
-//Performs real time search changes as user types
-
-function updateResult(query) {
-    let resultList = document.querySelector(".result");
-    resultList.innerHTML = "";
-
-    arr.map(function(algo){
-        query.split(" ").map(function (word){
-            if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1){
-                resultList.innerHTML += `<tr>
-                <td id=${algo.id}>${el.id}</td>
-                <td>${el.firstName}</td>
-                <td>${el.lastName}</td>
-                <td>${el.gender}</td>
-                <td>${el.dob}</td>
-                <td>${el.height}</td>
-                <td>${el.weight}</td>
-                <td>${el.eyeColor}</td>
-                <td>${el.occupation}</td>
-                <td>${el.parents}</td>
-                <td>${el.currentSpouse}</td>
-                </tr>`
-            }
-        })
-    })
-}
-
-=======
 function printName(){
 }
-//Populates table
+// Populates table
 printName()
 people.map(function(el){
     document.getElementById("people").innerHTML += `<tr>
@@ -174,20 +123,7 @@ function updateResult(query) {
     })
 }
 
->>>>>>> fd63253d3ef627aa8abf418cf22035b4423cdbec
  
 const height=function searchHeight(){
     console.log("Your overweight");
 }
-<<<<<<< HEAD
-
-// interactive table button that shows data once button is clicked
-function populateInformation(){
-    people.forEach(el => {
-            document.getElementById('peopleTable').innerHTML +=`<div>${people}</div><br />`;
-    }
-    ,)}
-=======
-
-
->>>>>>> fd63253d3ef627aa8abf418cf22035b4423cdbec
