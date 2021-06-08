@@ -1,0 +1,58 @@
+.navbar {
+    overflow: hidden;
+    background-color: transperant;
+    position: fixed; 
+    top: 0%; 
+    left: 0%;
+    width: 100%; 
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size:xx-large;
+  }
+  .navbar a:hover {
+    background: blue;
+    color: black;
+  }
+  .header {
+    height: 30%;
+    width: 100%;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    padding-top: 80px;
+  }
+  div {
+    word-wrap: break-word;
+  }
+  
+  h1{
+      text-align: center;
+  }
+  img {
+    display: block;
+    top: 15%;
+    margin: 0 auto;
+  }
+body{
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+footer{
+    position: static;
+    left: 0;
+    bottom: -5%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+  }
