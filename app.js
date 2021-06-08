@@ -1,27 +1,53 @@
 'use strict';
 
 
+ // Checks user input against names in Database
+
+let newPeople = people;
+function searchFirstName(){
+    let firstNameInput =document.forms['searchBox']['firstName'].value;
+    let filteredPeople= people.filter(function(person) {
+        firstNameInput = firstNameInput.charAt(0).toUpperCase() + firstNameInput.slice(1);
+        if(person.firstName === firstNameInput){
+            return true;
+        }
+        return false;
+    });
+}
+function searchLastName(){
+    let lastNameInput =document.forms['searchBox']['lastName'].value;
+    let filteredPeople= people.filter(function(person) {
+        lastNameInput = lastNameInput.charAt(0).toUpperCase() + lastNameInput.slice(1);
+        if(person.lastName === lastNameInput){
+            return true;
+        }
+        return false;
+    });
+}
+
+function searchHeight(){
+    let heighInput =document.forms['search']['height'].value;
+    let heightNum = Number(heighInput);
+    let filteredWeight =people.filter(function(person){
+        if(person.height === heightNum){
+            return true;
+        }
+        return false;
+    });
+
+}
 
 
 
-function searchByName(){
+
+function searchName(){
     // Grabbing the values from our nameForm form and inputs.
     document.getElementById("people").innerHTML
-    let firstNameInput = document.forms['nameForm']['fname'].value;
-    let lastNameInput = document.forms['nameForm']['lname'].value;
+    let firstNameInput = document.forms['searchbox']['firstName'].value;
+    let lastNameInput = document.forms['searchbox']['lastName'].value;
 
     // Checks user input against names in Database
 
-    function searchFirst(people){
-        let fnameInput = document.forms['nameForm']['fname'].vaule;
-        let firstNameRes = people.filter(function(person){
-            if(person.firstName == fnameInput){
-                return true;
-            }
-            return false;
-      })
-      return firstNameInput;
-    }
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
 
@@ -48,46 +74,63 @@ function searchByName(){
 
     }
 
-function printName(){
+// function printName(){
+// }
+// Populates table
+// printName()
+// people.map(function(el){
+//     document.getElementById("people").innerHTML += `<tr>
+//     <td id=${el.id}>${el.id}</td>
+//     <td>${el.firstName}</td>
+//     <td>${el.lastName}</td>
+//     <td>${el.gender}</td>
+//     <td>${el.dob}</td>
+//     <td>${el.height}</td>
+//     <td>${el.weight}</td>
+//     <td>${el.eyeColor}</td>
+//     <td>${el.occupation}</td>
+//     <td>${el.parents}</td>
+//     <td>${el.currentSpouse}</td>
+//     </tr>`
+
+    
+// });
+
+//Performs real time search changes as user types
+
+function updateResult(query) {
+    let resultList = document.querySelector(".result");
+    resultList.innerHTML = "";
+
+    arr.map(function(algo){
+        query.split(" ").map(function (word){
+            if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1){
+                resultList.innerHTML += `<tr>
+                <td id=${algo.id}>${el.id}</td>
+                <td>${el.firstName}</td>
+                <td>${el.lastName}</td>
+                <td>${el.gender}</td>
+                <td>${el.dob}</td>
+                <td>${el.height}</td>
+                <td>${el.weight}</td>
+                <td>${el.eyeColor}</td>
+                <td>${el.occupation}</td>
+                <td>${el.parents}</td>
+                <td>${el.currentSpouse}</td>
+                </tr>`
+            }
+        })
+    })
 }
-//Populates table
-printName()
-people.map(function(el){
-    document.getElementById("people").innerHTML += `<tr>
-    <td id=${el.id}>${el.id}</td>
-    <td>${el.firstName}</td>
-    <td>${el.lastName}</td>
-    <td>${el.gender}</td>
-    <td>${el.dob}</td>
-    <td>${el.height}</td>
-    <td>${el.weight}</td>
-    <td>${el.eyeColor}</td>
-    <td>${el.occupation}</td>
-    <td>${el.parents}</td>
-    <td>${el.currentSpouse}</td>
-    </tr>`
-})
 
-//Testiing a for on possibly looping through the array(condition)
-function searchForName(){
-for(i = 0; i < people.length; i++){
-	if(people[i].height < 70) {
-		document.write(people[i].height + "," + people[i].firstName + people[i].lastName)
-	}
-}
+ 
+const height=function searchHeight(){
+    console.log("Your overweight");
 }
 
-// Or filter objects 
-
-let newPeople = people.filter(function(ele){
-	return ele.eyeColor;
-});
-console.log(newPeople);
-
-// Ideal for using recursion
-
-// const reducedFilter = ( people,keys, fn) =>
-// people.filter(fn).map(el => 
-// 	keys.reduce((acc,key) =>{
-// 	acc[key] = el[key];
-	
+// interactive table button that shows data once button is clicked
+function populateInformation(){
+    people.forEach(el => {
+            document.getElementById('peopleTable').innerHTML +=`<div>${people}</div><br />`;
+    }
+    ,)}

@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most Wanted</title>
-    <a href="index.html"></a>
-    <a href="contact.html"></a>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-    <div class="navbar"-centered>
-        <a href="index.html">Home</a>
-        <a href="mostWanted.html">Most Wanted</a>
-        <a href="contact.html">Contact Me</a>
-        <div class="navbar">
-        </div>
-    </nav>    
+  <head>
+    <meta charset="utf-8">
+    <title>devCodeCamp &middot; Most Wanted</title>
+  </head>
+  <body>
     <!-- Filter/Search Table -->
     <table id="table">
     </table>
     <div class="menudrop">
-      
-      <button querysearch="showSearch()" class="querybtn">Search</button>
-    
-    <div id="query" class="query-information">
-      <form id="searchBox" name="form1">
+    <div> 
+      <form>
+        <label for="firstName"> First Name: </label>
+        <input type="text" name="fname" id="firstName" required maxlength="35" placeholder="Search first name" >
+        <label for="lastName"> Last Name: </label>
+        <input type="text" name="lname" id="lastName" required maxlength="35"  placeholder="Search last name" >
+       <button onclick="searchByName()"></button>
+      </form>
+    </div>
+      <!-- <form id="searchBox" name="form1">
       <h2>Individual Profile Search</h2>
       </form>
-      <input type="text" name="fname" id="firstName" placeholder="Search first name" onkeyup="fname()">
-      <input type="text" name="lname" id="lastName" placeholder="Search last name" onkeyup="lname()">
-      <input type="text" name="lname" id="height" placeholder="Search by height" onkeyup="height()">
-      <input type="text" name="weight" id="weight" placeholder="Search by weight" onkeyup="weight()">
-      <input type="text" name="eyec" id="eyecolor" placeholder="Search by eyecolor" onkeyup="eyecolor()">
-      <input type="text" name="occupation" id="occupation" placeholder="Search by occupation" onkeyup="occupation()">
-
+      <input id="query">
+      <input type="text" name="fname" id="firstName"requiredmaxlength="35"                    placeholder="Search first name" >
+      <input type="text" name="lname" id="lastName"requiredmaxlength="35" placeholder="Search last name" >
+      <input type="text" name="height" id="height"requiredmaxlength="35" placeholder="Search by height" >
+      <input type="text" name="weight" id="weight"requiredmaxlength="35" placeholder="Search by weight" >
+      <input type="text" name="eyec" id="eyecolor"requiredmaxlength="35" placeholder="Search by eyecolor" >
+      <input type="text" name="occupation" id="occupation"requiredmaxlength="35" placeholder="Search by occupation">
+    </input>
+      </div>
       <br>
       <br>
       <label for="dateOfBirth">Search by Birth</label>
@@ -49,31 +44,80 @@
       <br>
       <br>
       <br>
-      <button type="button" oneclick="searchByFirstName();searchByLastName();searchByGender(); searchByHeight();searchByWeight();searchByEyeColor();searchbydateOfBirth();searchByOccupation()">Search</button>
-     
-    <h1>Most Wanted</h1>
-    <table>
-      <thead>
-          <tr>
-              <th>Id</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Gender</th>
-              <th>DOB</th>
-              <th>Height</th>
-              <th>Weight</th>
-              <th>Eye Color</th>
-              <th>Occupation</th>
-              <th>Parents</th>
-              <th>Current Spouse</th>
-              <th></th>
-          </tr>
-      </thead>
-      <tbody id="people">
+      <button type="button" onclick="searchFirstName();searchLastName();searchGender(); searchHeight();searchWeight();searchEyeColor();searchdateOfBirth();searchOccupation() ">Search</button>
+      
+    </form>
+
+    <!-- Make Revision to multi-search option -->
+    <!-- <form id="searchBox2" name="form2">
+      <h2>More Than One Criteria Search </h2>
+      <input type="text" name="fname2" id="firstName2" class ="multi" placeholder="Search first name" >
+      <input type="text" name="lname2" id="lastName2" class ="multi" placeholder="Search last name" >
+      <input type="text" name="lname2" id="height2" class ="multi" placeholder="Search by height" >
+      <input type="text" name="weight2" id="weight2" class ="multi" placeholder="Search by weight"> -->
+      <!-- <input type="text" name="eyec2" id="eyecolor2" class = "multi" placeholder="Search by eyecolor" >
+      <input type="text" name="occupation2" id="occupation2" class = "multi" placeholder="Search by occupation">
+     <label for="gender2">Search by Gender</label>
+     <select name="gender2" id="gender2" class="multi">
+     <option value="">Select</option>
+     <option value="male">Male</option>
+     <option value="female">Female</option>
+      </select>
+      <br>
+      <br>
+      <input type="button" id="search" value="search" oneclick="multiSearch()"/>
+    </form>
+    <button type="button" oneclick="reset()">Reset Form</button>
+  </div> -->
+</div>
+<h1>Most Wanted</h1>
+<div id=peopleTable>
+  <button class="btn" onclick="populateInformation()">Billy Bob</button>
+  <!-- <button class="btn">Uma Bob</button>
+    <button class="btn">Michael Walkens</button>
+    <button class="btn">Jon Walkens</button>
+    <button class="btn">Jack Pafoy</button>
+    <button class="btn">Jen Pafoy</button>
+    <button class="btn">Mister Patatoo</button>
+    <button class="btn">Missuz Patatoo</button>
+    <button class="btn">Joy Madden</button>
+    <button class="btn">Jon Madden</button>
+    <button class="btn">Jill Pafoy</button>
+    <button class="btn">Ralph	Bob</button>
+    <button class="btn">Jasmine	Bob</button>
+    <button class="btn">Annie Pafoy</button>
+    <button class="btn">Dave Pafoy</button>
+    <button class="btn">Amii Pafoy</button>
+    <button class="btn">Regina Madden</button>
+    <button class="btn">Hana Madden</button>
+    <button class="btn">Eloise Madden</button>
+    <button class="btn">Mattias	Madden</button>
+    <button class="btn">Ellen	Madden</button>
+    <button class="btn">Joey Madden</button> -->
+  </div>
+  <!-- <table type="search" placeholder="search">
+    <thead>
+        <tr>
+          <th id="result-list"></th>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Eye Color</th>
+            <th>Occupation</th>
+            <th>Parents</th>
+            <th>Current Spouse</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="people">
   
-      </tbody>
-  </table>
+    </tbody>
+  </table> -->
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
-</html>
+</html> 
