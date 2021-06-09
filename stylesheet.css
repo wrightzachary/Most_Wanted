@@ -27,10 +27,6 @@
     background-color: transparent;
     padding-top: 80px;
   }
-  div {
-    word-wrap: break-word;
-  }
-  
   h1{
       text-align: center;
   }
@@ -40,26 +36,26 @@
     margin: 0 auto;
   }
 body{
-  overflow: scroll;
-    background-image: url("images/background.jpg");
-    background-size:  cover;
-    color: white;
-    font-size: 30px;
-    text-align: center;
+  background-image: url("images/background.jpg");
+  background-size:  cover;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 20%;
 }
 footer{
     position: static;
-    left: 0;
+    left: 0%;
     bottom: -5%;
     width: 100%;
     background-color:blue;
     color: white;
     text-align: left;
   }
-  .container {
-    
+.container {
     max-width: 500px;
-    margin: 10% auto;
+    margin: 5% auto;
+    position: center;
     padding: 20px;
     box-shadow: 0px 0px 20px #00afb9;
     margin-bottom: 20px;
