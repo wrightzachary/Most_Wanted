@@ -42,7 +42,7 @@
 body{
   overflow: scroll;
     background-image: url("images/background.jpg");
-    /* background-size:  cover; */
+    background-size:  cover;
     color: white;
     font-size: 30px;
     text-align: center;
