@@ -3,48 +3,24 @@
 
  // Checks user input against names in Database
 
-let newPeople = people;
-function searchFirstName(){
-    let firstNameInput =document.forms['searchBox']['firstName'].value;
-    let filteredPeople= people.filter(function(person) {
-        firstNameInput = firstNameInput.charAt(0).toUpperCase() + firstNameInput.slice(1);
-        if(person.firstName === firstNameInput){
-            return true;
-        }
-        return false;
-    });
-}
-function searchLastName(){
-    let lastNameInput =document.forms['searchBox']['lastName'].value;
-    let filteredPeople= people.filter(function(person) {
-        lastNameInput = lastNameInput.charAt(0).toUpperCase() + lastNameInput.slice(1);
-        if(person.lastName === lastNameInput){
-            return true;
-        }
-        return false;
-    });
-}
-
-function searchHeight(){
-    let heighInput =document.forms['search']['height'].value;
-    let heightNum = Number(heighInput);
-    let filteredWeight =people.filter(function(person){
-        if(person.height === heightNum){
-            return true;
-        }
-        return false;
-    });
-
-}
 
 
 
-
-function searchName(){
+function getResults(){
     // Grabbing the values from our nameForm form and inputs.
     document.getElementById("people").innerHTML
-    let firstNameInput = document.forms['searchbox']['firstName'].value;
-    let lastNameInput = document.forms['searchbox']['lastName'].value;
+    let firstNameInput = document.forms['searchMe']['fname'].value;
+    let firstNameInput = document.forms['searchMe']['lname'].value;
+    let firstNameInput = document.forms['searchMe']['gender'].value;
+    let firstNameInput = document.forms['searchMe']['dateOfBirth'].value;
+    let firstNameInput = document.forms['searchMe']['height'].value;
+    let firstNameInput = document.forms['searchMe']['weight'].value;
+    let firstNameInput = document.forms['searchMe']['eyecolor'].value;
+    let firstNameInput = document.forms['searchMe']['occupation'].value;
+    let firstNameInput = document.forms['searchMe']['spouse'].value;
+    let firstNameInput = document.forms['searchMe']['parents'].value;
+
+
 
     // Checks user input against names in Database
 
