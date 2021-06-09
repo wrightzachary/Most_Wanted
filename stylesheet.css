@@ -1,5 +1,4 @@
 .navbar {
-    overflow: hidden;
     background-color: transperant;
     position: fixed; 
     top: 0%; 
@@ -41,8 +40,9 @@
     margin: 0 auto;
   }
 body{
+  overflow: scroll;
     background-image: url("images/background.jpg");
-    background-size: cover;
+    /* background-size:  cover; */
     color: white;
     font-size: 30px;
     text-align: center;
@@ -52,7 +52,46 @@ footer{
     left: 0;
     bottom: -5%;
     width: 100%;
-    background-color: black;
+    background-color:blue;
     color: white;
     text-align: left;
   }
+  .container {
+    
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00afb9;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: black;
+    padding: 20px;
+  }
+input[type=text], select, textarea {
+  color: antiquewhite;
+  font-size: large;
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid black; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  box-shadow: 0px 0px 20px blue;
+  background-color: black;
+  resize: vertical 
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px blue;
+}
+
+input[type=submit]:hover {
+  background-color: blue;
+}

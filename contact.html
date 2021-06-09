@@ -18,6 +18,30 @@
         <div class="navbar">
         </div>
     </nav>    
+<div class="container">
+    <form action="POST">
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your Full Name..">
+        
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your Email..">
+
+        <label for="submission">Submission</label>
+        <select id="submission" name="Submission">
+          <option value="pleaseSelect">Please Select an Option...</Optio>
+          <option value="anonymous">Anonymous</option>
+          <option value="includeContactInformation">Include Contact information</option>
+        </select>
+    
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+    
+      </form>
+      <p>If you wish to contact use by phone please dial MOST WANTED (667.892.6833)</p>
+</div>
     <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
