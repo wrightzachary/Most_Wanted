@@ -124,154 +124,97 @@ people.map(function(el){
             alert("No one matching that description exists in our system.")
         }
     }
-            
-        // if(personsOfInterest.length > 0){
-        //     console.log(personsOfInterest);
-        // }else{
-        //     alert('Sorry, looks like there is no one with that name.');
-        // }
-        //     function searchByFirstName(firstName, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.firstName == firstName) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-            
-        //     function searchByLastName(lastName, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.lastName == lastName) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-            
-        //     function searchByEyeColor(eyeColor, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.eyeColor == eyeColor) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-            
-        //     function searchByGender(gender, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.gender == gender) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-        //     function searchByDateOfBirth(dateOfBirth, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.dateOfBirth == dateOfBirth) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-        //     function searchByHeight(height, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.height == height) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-        //     function searchByWeight(weight, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.weight == weight) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-        //     function searchByOccupation(occupation, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.occupation == occupation) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-        //     function searchByParents(parents, peopleToSearch) {    
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.parents == parents) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-        //     function searchBySpouse(spouse, peopleToSearch) {
-        //         let filteredPeople = peopleToSearch.filter(function (el) {
-        //             if (el.spouse == spouse) {
-        //                 return true;
-        //             }
-        //             else {
-        //                 return false;
-        //             }
-        //         })
-        //         console.log(filteredPeople)
-        //         return filteredPeople;
-        //     }
-            
-            
-        //     function getPersonId(idEntered){
-        //         let filteredPeople = people.filter(person => {
-        //             if(person.id == idEntered){
-        //                 return true;
-        //             }
-        //             else{
-        //                 return false
-        //             }
-        //         });
-            
-        //         if(filteredPeople.length == 1){
-        //             return filteredPeople[0]
-        //         }else{
-        //             alert('That individual does not exist in our system')
-        //         }
-        //     }
-                
+            function searchByFirstName(firstName, getResults){
+                let filteredPersons = getResults.filter(function(person){
+                    if(person.firstName == firstName){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                })
+                return filteredPersons
+            }
+            function searchByLastName(lastName, getResults){
+                let filteredPersons = getResults.filter(function(person){
+                    if(person.lastName == lastName){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                })
+                return filteredPersons
+            }
+            function searchByGender(gender, getResults){
+                let filteredPersons = getResults.filter(function(person){
+                    if(person.gender == gender){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                })
+                return filteredPersons
+            }
+                function searchByDateOfBirth(dob, getResults){
+                    let filteredPersons = getResults.filter(function(person){
+                        if(person.dateOfBirth == dob){
+                            return true;
+                        }
+                        else{
+                            return false;
+                        }
+                    })
+                    return filteredPersons
+                }
+                function searchByHeight(height, getResults){
+                    let filteredPersons = getResults.filter(function(person){
+                        if(person.height == height){
+                            return true;
+                        }
+                        else{
+                            return false;
+                        }
+                    })
+                    return filteredPersons
+            }
+            function searchByWeight(weight, getResults){
+                let filteredPersons = getResults.filter(function(person){
+                if(person.weight == weight){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+
+                })
+                return filteredPersons
+            }
+            function searchByEyeColor(eyeColor, getResults){
+                let filteredPersons = getResults.filter(function(person){
+                    if(person.eyeColor == eyeColor){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                })
+                return filteredPersons
+            }
+            function searchByOccupation(occupation, getResults){
+                let filteredPersons = getResults.filter(function(person){
+                    if(person.occupation == occupation){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            })
+            return filteredPersons
+        }
+       
+           
                 
                 
         
@@ -340,4 +283,4 @@ people.map(function(el){
           dots[slideIndex-1].className += " active";
           captionText.innerHTML = dots[slideIndex-1].alt;
         }
-    }
+    
