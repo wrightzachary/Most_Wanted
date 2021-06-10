@@ -1,37 +1,5 @@
 'use strict';
 
-
-// Checks user input against names in Database
-
-// Checks user input against names in Database
-
-
-// "people" is coming from the data.js file. We have access to it within this JavaScript file.
-
-//Form Validation will allow user to access this file to verify if entered name exist in database.
-// let filteredPeople = people.filter(function (person) {
-//     document.getElementById("searchMe").innerHTML += `<input>`
-//     if(person.firstName === firstNameInput && person.lastName === lastNameInput){
-//         return true;
-//     }
-//     return false;
-// });
-
-// Rather than console logging, you need to append the filteredPeople to a table.
-// function searchByName(firstName, lastName, peopleToSearch) {
-    //     let filteredPeople = peopleToSearch.filter(function (person) {
-    //         if (person.firstName === firstNameInput && person.lastName === lastNameInput) {
-    //             return true;
-    //         }
-    //         return false;
-    //     });
-    //     return filteredPeople;
-    // }
-
-
-// Grabbing the values from our nameForm form and inputs.
-
-
        
   
   
