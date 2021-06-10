@@ -117,7 +117,13 @@ people.map(function(el){
            </tr>`
 
         })
-        
+        if(getResults.length == 1){
+            personsOfInterest = getResults[0]
+        }
+        if(getResults.length == 0){
+            alert("No one matching that description exists in our system.")
+        }
+    }
             
         // if(personsOfInterest.length > 0){
         //     console.log(personsOfInterest);
