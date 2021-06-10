@@ -23,7 +23,7 @@
     <!-- <!-- <table id="table"> -->
 
       <h1>Most Wanted</h1>
-      <table class="center">
+      <table id="people" class="center">
         <thead>
         <tr>
           <th>Id</th>
@@ -84,6 +84,26 @@
         <!--User will submit request--> 
       </form> 
     </form>
+
+    <table id="getresults">
+      <thead> Persons of Interest Search Results
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Eye Color</th>
+        <th>Occupation</th>
+        <th>Parents</th>
+        <th>Current Spouse</th>
+      </thead>
+      <tbody id="getresults">
+        </tbody>
+    </table>
+    <button onclick="clearTable()">Clear Table</button>
+    <button oneclick="personsOfInterest">Submit</button>
     <!--oneclick="FirstName();LastName();Gender();DateOfBirth();Height();Weight();eyeColor();Occupation()-->
     
     <!-- Make Revision to multi-search option -->
