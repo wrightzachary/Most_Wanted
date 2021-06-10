@@ -8,38 +8,62 @@
     <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <nav class="navbar"-centered>
+    <div class="navbar">
+    <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="mostWanted.html">Most Wanted</a>
-      <a href="contact.html">Contact Me</a>
-      <div class="navbar">
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
       </div>
     </nav>   
     
     
 
     <!-- Filter/Search Table -->
-    <!-- <table id="table">
+    <!-- <!-- <table id="table"> -->
 
+      <h1>Most Wanted</h1>
+      <table class="center">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>DOB</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Eye Color</th>
+          <th>Occupation</th>
+          <th>Parents</th>
+          <th>Current Spouse</th>
+        </tr>
+      </thead>
+      <tbody id="people">
+        
+      </tbody>
     </table>
-    <div class="menuOption">
-    <div>  -->
-    <div class="container">
-      <!-- <form id="searchBox" name="form1"> -->
-        <form id="searchMe" >
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="printName" class="container">
+    <form id="searchBox" name="form1">
+      <form id="searchMe" >
         <form id="searchMe">
-        <h2>Person of Interest </h2>
-        <label for="firstName">First Name</label> 
-        <input type="text" name="fname"id="fname"  requiredmaxlength="35"><br> 
-        <label for="lastName">Last Name</label>                 
-        <input type="text" name="lname" id="lname" requiredmaxlength="35" ><br>
-        <label for="gender">Gender</label>
-        <select name="gender" id="gender">
-        <option value="default">Select</option>
-        <option value="default">Male</option>
-        <option value="default">Female</option>
+          <h2>Person of Interest </h2>
+          <label for="firstName">First Name</label> 
+          <input type="text" name="fname"id="fname"  requiredmaxlength="35"><br> 
+          <label for="lastName">Last Name</label>  
+          <input type="text" name="lname" id="lname" requiredmaxlength="35" ><br>
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender">
+            <option value="default">Select</option>
+            <option value="default">Male</option>
+          <option value="default">Female</option>
         </select><br>
-        <label for="dateOfBirth">Date of Birth</label><br>
+        <label for="dateOfBirth">Date of Birth</label><br> 
         <input type="date" name="dateOfBirth" id="dateOfBirth"><br>
         <label for="height">Height</label>
         <input type="text" name="height" id="height"  requiredmaxlength="35" ><br>
@@ -54,42 +78,21 @@
         <label for="occupation">Parents</label>
         <input type="text" name="parents" id="parents"  requiredmaxlength="35"><br>
         <br>
+        <input type="submit" value="Submit">
         <br>
         <br>
         <!--User will submit request--> 
-       <button type="button" onclick="getResults()" >Submit</button>
-      </form>
-     <!--oneclick="FirstName();LastName();Gender();DateOfBirth();Height();Weight();eyeColor();Occupation()-->
-
+      </form> 
+    </form>
+    <!--oneclick="FirstName();LastName();Gender();DateOfBirth();Height();Weight();eyeColor();Occupation()-->
+    
     <!-- Make Revision to multi-search option -->
-   </div>
-<h1>Most Wanted</h1>
-  <table type="search" placeholder="search">
-    <thead>
-        <tr>
-          <th id="result-list"></th>
-            <th>Id</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Gender</th>
-            <th>DOB</th>
-            <th>Height</th>
-            <th>Weight</th>
-            <th>Eye Color</th>
-            <th>Occupation</th>
-            <th>Parents</th>
-            <th>Current Spouse</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody id="people">
-  
-    </tbody>
-  </table>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <footer>
     <p>Created by: Murray Milton and Zachary Wright</p>
-    </footer>
+  </footer>
   <script src="data.js"></script>
   <script src="app.js"></script>
-  </body>
+</body>
 </html> 

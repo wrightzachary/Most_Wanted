@@ -9,7 +9,7 @@ const people = [
 		"weight": 175,
 		"eyeColor": "brown",
 		"occupation": "programmer",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 401222887
 	},
 	{
@@ -22,7 +22,7 @@ const people = [
 		"weight": 162,
 		"eyeColor": "brown",
 		"occupation": "assistant",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 272822514
 	},
 	{
@@ -35,7 +35,7 @@ const people = [
 		"weight": 250,
 		"eyeColor": "brown",
 		"occupation": "landscaper",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 260451248
 	},
 	{
@@ -48,7 +48,7 @@ const people = [
 		"weight": 115,
 		"eyeColor": "brown",
 		"occupation": "assistant",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 409574486
 	},
 	{
@@ -61,7 +61,7 @@ const people = [
 		"weight": 207,
 		"eyeColor": "black",
 		"occupation": "nurse",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 464142841
 	},
 	{
@@ -74,7 +74,7 @@ const people = [
 		"weight": 256,
 		"eyeColor": "black",
 		"occupation": "student",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 629807187
 	},
 	{
@@ -87,7 +87,7 @@ const people = [
 		"weight": 170,
 		"eyeColor": "hazel",
 		"occupation": "architect",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 595767575
 	},
 	{
@@ -100,7 +100,7 @@ const people = [
 		"weight": 137,
 		"eyeColor": "blue",
 		"occupation": "architect",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 982411429
 	},
 	{
@@ -113,7 +113,7 @@ const people = [
 		"weight": 199,
 		"eyeColor": "hazel",
 		"occupation": "doctor",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": null
 	},
 	{
@@ -126,7 +126,7 @@ const people = [
 		"weight": 205,
 		"eyeColor": "black",
 		"occupation": "landscaper",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": null
 	},
 	{
@@ -269,7 +269,7 @@ const people = [
 		"weight": 100,
 		"eyeColor": "blue",
 		"occupation": "doctor",
-		"parents": [],
+		"parents": null,
 		"currentSpouse": 313207561
 	},
 	{
